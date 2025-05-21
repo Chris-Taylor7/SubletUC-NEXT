@@ -26,39 +26,42 @@ export default function Navbar() {
       <Drawer opened={opened} onClose={close} title="Navigation" padding="md">
         <Stack>
           <Link href="/" passHref>
-            <Button size="compact-lg"  onClick={close}>
+            <Button  variant="gradient"
+      gradient={{ from: 'rgba(3, 1, 1, 1)', to: 'red', deg: 0 }} size="compact-lg"  onClick={close}>
               Home
             </Button>
           </Link>
 
-          <Link href="/create-listing" passHref>
-            <Button size="compact-lg"  onClick={close}>
+          <Link href="../pages/create-listing" passHref>
+            <Button variant="gradient"
+      gradient={{ from: 'rgba(3, 1, 1, 1)', to: 'red', deg: 0 }} size="compact-lg"  onClick={close}>
               Create a Listing
             </Button>
           </Link> 
 
-          <Link href="/view-listings" passHref>
-            <Button size="compact-lg"  onClick={close}>
+          <Link href="../pages/view-listings" passHref>
+            <Button variant="gradient"
+      gradient={{ from: 'rgba(3, 1, 1, 1)', to: 'red', deg: 0 }} size="compact-lg"  onClick={close}>
               View Available Listings
             </Button>
           </Link>
 
-          <Link href="/messages" passHref>
-            <Button size="compact-lg"  onClick={close}>
+          <Link href="../pages/messages" passHref>
+            <Button variant="gradient"
+      gradient={{ from: 'rgba(3, 1, 1, 1)', to: 'red', deg: 0 }} size="compact-lg"  onClick={close}>
               Messages
             </Button>
           </Link>
 
-          <Link href="/bookmarks" passHref>
-            <Button size="compact-lg"  onClick={close}>
+          <Link href="../pages/bookmarks" passHref>
+            <Button variant="gradient"
+      gradient={{ from: 'rgba(3, 1, 1, 1)', to: 'red', deg: 0 }} size="compact-lg"   onClick={close}>
               <FaBookmark />
             </Button>
           </Link>
 
-          <Link href="/profile" passHref>
-            <Button size="compact-lg"  onClick={close}>
-              <Avatar color="black" radius="xl">CT</Avatar>
-            </Button>
+          <Link href="../pages/profile" passHref>
+            <Avatar variant="filled" radius="lg" color="red" src="" onClick={close} />
           </Link>
 
         </Stack>
