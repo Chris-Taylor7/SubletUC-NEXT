@@ -1,27 +1,31 @@
+// Import styles of packages that you've installed.
+// All packages except `@mantine/hooks` require styles imports
 import '@mantine/core/styles.css';
 
-import React from 'react';
-import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
-import { theme } from '../theme';
+import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core';
+import Navbar from '@/components/Navbar/page';
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'My Mantine app',
+  description: 'I have followed setup instructions carefully',
 };
 
-export default function RootLayout({ children }: { children: any }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript />
-        <link rel="shortcut icon" href="/favicon.svg" />
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
-        />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        
+        <MantineProvider>
+          <Navbar />
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );
